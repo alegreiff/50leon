@@ -1,47 +1,62 @@
 ---
 const navItems = [
-  { href: '/', label: 'Inicio' },
-  { href: '/proyecto', label: 'El Proyecto' },
-  { href: '/universos', label: 'Los Tres Universos' },
-  { href: '/comparativa', label: 'Comparativa' },
-  { href: '/participar', label: 'Participar' },
+  { href: "/", label: "Inicio" },
+  { href: "/proyecto", label: "El proyecto" },
+  { href: "/universos", label: "Los tres universos" },
+  { href: "/comparativa", label: "Comparativa" },
+  { href: "/participar", label: "Participar" },
 ];
 
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+<nav
+  class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <a href="/" class="flex items-center space-x-3 group">
-        <div class="text-2xl font-serif font-bold text-greiff-dark group-hover:text-greiff-sepia transition-colors">
+        <div
+          class="text-2xl font-serif font-bold text-greiff-dark group-hover:text-greiff-sepia transition-colors"
+        >
           LdG
         </div>
         <span class="text-sm text-greiff-gray hidden sm:block">50 Años</span>
       </a>
-      
+
       <div class="hidden md:flex space-x-8">
-        {navItems.map((item) => (
-          <a 
-            href={item.href}
-            class={`text-sm font-medium transition-colors ${
-              currentPath === item.href 
-                ? 'text-greiff-dark border-b-2 border-greiff-dark' 
-                : 'text-greiff-gray hover:text-greiff-dark'
-            }`}
-          >
-            {item.label}
-          </a>
-        ))}
+        {
+          navItems.map((item) => (
+            <a
+              href={item.href}
+              class={`text-sm font-medium transition-colors ${
+                currentPath === item.href
+                  ? "text-greiff-dark border-b-2 border-greiff-dark"
+                  : "text-greiff-gray hover:text-greiff-dark"
+              }`}
+            >
+              {item.label}
+            </a>
+          ))
+        }
       </div>
 
-      <button 
+      <button
         id="mobile-menu-button"
         class="md:hidden p-2 rounded-md text-greiff-gray hover:text-greiff-dark hover:bg-gray-100"
         aria-label="Abrir menú"
       >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
@@ -49,28 +64,30 @@ const currentPath = Astro.url.pathname;
 
   <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200">
     <div class="px-2 pt-2 pb-3 space-y-1">
-      {navItems.map((item) => (
-        <a 
-          href={item.href}
-          class={`block px-3 py-2 rounded-md text-base font-medium ${
-            currentPath === item.href
-              ? 'bg-gray-100 text-greiff-dark'
-              : 'text-greiff-gray hover:bg-gray-50 hover:text-greiff-dark'
-          }`}
-        >
-          {item.label}
-        </a>
-      ))}
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`block px-3 py-2 rounded-md text-base font-medium ${
+              currentPath === item.href
+                ? "bg-gray-100 text-greiff-dark"
+                : "text-greiff-gray hover:bg-gray-50 hover:text-greiff-dark"
+            }`}
+          >
+            {item.label}
+          </a>
+        ))
+      }
     </div>
   </div>
 </nav>
 
 <script>
-  const button = document.getElementById('mobile-menu-button');
-  const menu = document.getElementById('mobile-menu');
-  
-  button?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
+  const button = document.getElementById("mobile-menu-button");
+  const menu = document.getElementById("mobile-menu");
+
+  button?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
   });
 </script>
 
