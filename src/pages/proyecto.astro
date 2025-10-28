@@ -1,0 +1,301 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="El Proyecto - León de Greiff">
+  <Navigation />
+  
+  <main class="pt-16">
+    <!-- Header -->
+    <section class="bg-gradient-to-b from-greiff-light to-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="text-4xl md:text-5xl font-serif font-bold text-greiff-dark mb-6">
+            El Proyecto
+          </h1>
+          <p class="text-xl text-greiff-gray leading-relaxed">
+            Un homenaje digital al poeta de los múltiples rostros en el 50 aniversario de su partida
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Context -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg max-w-none">
+          <div class="bg-greiff-light rounded-lg p-8 mb-12">
+            <h2 class="text-3xl font-serif font-bold text-greiff-dark mb-6">
+              ¿Por Qué Este Proyecto?
+            </h2>
+            <p class="text-greiff-gray leading-relaxed mb-4">
+              En 2026 se cumplirán 50 años de la partida de <strong>León de Greiff</strong>, uno de los 
+              poetas más singulares e influyentes de la literatura colombiana y latinoamericana del siglo XX. 
+              Su obra, rica en experimentación lingüística, referencias filosóficas y musicalidad, merece 
+              un espacio digital que honre su complejidad y la haga accesible a nuevas generaciones.
+            </p>
+            <p class="text-greiff-gray leading-relaxed">
+              Actualmente, el material sobre León de Greiff está disperso en diversas instituciones, 
+              publicaciones y medios. Este proyecto busca crear <strong>leondegreiff.org</strong>, 
+              un portal centralizado que se convierta en el recurso de referencia mundial sobre el poeta, 
+              su obra y su legado.
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-serif font-bold text-greiff-dark mb-6">
+            Visión del Proyecto
+          </h2>
+          <p class="text-greiff-gray leading-relaxed mb-6">
+            Crear una plataforma digital que sirva tanto al público general como a investigadores 
+            especializados, ofreciendo múltiples niveles de profundidad y formas de acercamiento 
+            a la vida y obra de León de Greiff.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
+            <div class="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
+              <div class="text-4xl mb-4">📚</div>
+              <h3 class="text-lg font-semibold text-greiff-dark mb-2">Para Legos</h3>
+              <p class="text-sm text-greiff-gray">
+                Contenido accesible para quienes se acercan por primera vez al poeta. 
+                Biografía, poemas seleccionados, fotos y recursos multimedia.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
+              <div class="text-4xl mb-4">🔗</div>
+              <h3 class="text-lg font-semibold text-greiff-dark mb-2">Metadatos</h3>
+              <p class="text-sm text-greiff-gray">
+                Enlaces curados a recursos externos: documentales, música, archivos digitales, 
+                lecturas y material audiovisual.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
+              <div class="text-4xl mb-4">🎓</div>
+              <h3 class="text-lg font-semibold text-greiff-dark mb-2">Profundizando</h3>
+              <p class="text-sm text-greiff-gray">
+                Material académico: índices, glosarios, ensayos críticos y herramientas 
+                de investigación para especialistas.
+              </p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-serif font-bold text-greiff-dark mb-6 mt-16">
+            Enfoque por Universos
+          </h2>
+          <p class="text-greiff-gray leading-relaxed mb-6">
+            Entendiendo las realidades de financiamiento y recursos, hemos diseñado el proyecto 
+            en tres fases o "universos" progresivos:
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start bg-green-50 rounded-lg p-6">
+              <div class="flex-shrink-0 mr-4">
+                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl">
+                  A
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-greiff-dark mb-2">Universo A: Mínimo Viable</h3>
+                <p class="text-greiff-gray">
+                  Una presencia digna y funcional desde el lanzamiento. Contenido estático pero 
+                  de alta calidad que establece las bases para futuro crecimiento.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start bg-blue-50 rounded-lg p-6">
+              <div class="flex-shrink-0 mr-4">
+                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl">
+                  B
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-greiff-dark mb-2">Universo B: Realista</h3>
+                <p class="text-greiff-gray">
+                  Añade interactividad y dinamismo. Incluye líneas de tiempo, buscadores, 
+                  contenido actualizable y herramientas para explorar la obra.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start bg-purple-50 rounded-lg p-6">
+              <div class="flex-shrink-0 mr-4">
+                <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white text-2xl">
+                  C
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-greiff-dark mb-2">Universo C: Ideal Soñador</h3>
+                <p class="text-greiff-gray">
+                  El legado definitivo. Incluye gamificación, IA, contenido multimedia original, 
+                  portal educativo multilingüe y una aplicación móvil.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-20 bg-greiff-light">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-serif font-bold text-greiff-dark mb-12 text-center">
+          Cronograma Propuesto
+        </h2>
+        <div class="space-y-8">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-32 text-right pr-6">
+              <span class="text-sm font-semibold text-greiff-accent">2025</span>
+            </div>
+            <div class="flex-1 bg-white rounded-lg shadow-sm p-6 border-l-4 border-green-500">
+              <h3 class="text-lg font-semibold text-greiff-dark mb-2">Planificación y Fase A</h3>
+              <p class="text-sm text-greiff-gray">
+                Diseño del proyecto, búsqueda de financiamiento y desarrollo del Universo A. 
+                Lanzamiento previo a la conmemoración de 2026.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-32 text-right pr-6">
+              <span class="text-sm font-semibold text-greiff-accent">2026</span>
+            </div>
+            <div class="flex-1 bg-white rounded-lg shadow-sm p-6 border-l-4 border-blue-500">
+              <h3 class="text-lg font-semibold text-greiff-dark mb-2">Lanzamiento y Conmemoración</h3>
+              <p class="text-sm text-greiff-gray">
+                50 años de la partida de León de Greiff (11 de julio). Lanzamiento oficial 
+                del sitio y eventos de conmemoración.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-32 text-right pr-6">
+              <span class="text-sm font-semibold text-greiff-accent">2026-2027</span>
+            </div>
+            <div class="flex-1 bg-white rounded-lg shadow-sm p-6 border-l-4 border-blue-500">
+              <h3 class="text-lg font-semibold text-greiff-dark mb-2">Evolución al Universo B</h3>
+              <p class="text-sm text-greiff-gray">
+                Según recursos disponibles, implementación de funcionalidades interactivas 
+                y contenido dinámico.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-32 text-right pr-6">
+              <span class="text-sm font-semibold text-greiff-accent">2027+</span>
+            </div>
+            <div class="flex-1 bg-white rounded-lg shadow-sm p-6 border-l-4 border-purple-500">
+              <h3 class="text-lg font-semibold text-greiff-dark mb-2">Hacia el Universo C</h3>
+              <p class="text-sm text-greiff-gray">
+                Desarrollo del legado definitivo con todas las funcionalidades avanzadas, 
+                contenido multimedia y alcance internacional.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-serif font-bold text-greiff-dark mb-6 text-center">
+          Equipo y Colaboradores
+        </h2>
+        <p class="text-center text-greiff-gray mb-12 max-w-2xl mx-auto">
+          Este proyecto requiere la colaboración de diversos profesionales y el apoyo de 
+          instituciones culturales comprometidas con la preservación del patrimonio literario colombiano.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-greiff-light rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">🎨</span>
+            </div>
+            <p class="text-sm font-medium text-greiff-dark">Diseñadores</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-greiff-light rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">💻</span>
+            </div>
+            <p class="text-sm font-medium text-greiff-dark">Programadores</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-greiff-light rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">📖</span>
+            </div>
+            <p class="text-sm font-medium text-greiff-dark">Investigadores</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-greiff-light rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">✍️</span>
+            </div>
+            <p class="text-sm font-medium text-greiff-dark">Escritores</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-greiff-light rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">🎬</span>
+            </div>
+            <p class="text-sm font-medium text-greiff-dark">Productores</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-greiff-light rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">🏛️</span>
+            </div>
+            <p class="text-sm font-medium text-greiff-dark">Instituciones</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-greiff-light rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">🌐</span>
+            </div>
+            <p class="text-sm font-medium text-greiff-dark">Traductores</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-greiff-light rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">🤝</span>
+            </div>
+            <p class="text-sm font-medium text-greiff-dark">Patrocinadores</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-greiff-dark text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
+          Sé Parte de Este Legado
+        </h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          Ya sea con apoyo financiero, conocimiento técnico, o colaboración institucional, 
+          tu participación es fundamental para hacer realidad este proyecto.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/participar" 
+            class="inline-flex items-center justify-center px-8 py-4 bg-white text-greiff-dark rounded-lg hover:bg-gray-100 transition-all shadow-lg text-lg font-medium"
+          >
+            Cómo Participar
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a 
+            href="/universos" 
+            class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-greiff-dark transition-all text-lg font-medium"
+          >
+            Ver Los Universos
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

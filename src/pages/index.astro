@@ -1,0 +1,243 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="León de Greiff - 50 Años">
+  <Navigation />
+
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-greiff-light to-white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="animate-fadeIn">
+            <h1
+              class="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-greiff-dark mb-6 leading-tight"
+            >
+              León de Greiff
+            </h1>
+            <p
+              class="text-xl md:text-2xl text-greiff-accent mb-8 leading-relaxed"
+            >
+              50 años de su partida<br />
+              Un legado poético imperecedero
+            </p>
+            <div class="prose prose-lg text-greiff-gray mb-8">
+              <p class="italic border-l-4 border-greiff-sepia pl-4">
+                Dicen que soy sonámbulo, que soy loco, que soy<br />
+                la mar de cosas malas —para el criterio ambiente—;<br />
+                que soy frío y abstracto, recóndito, incoherente...:<br />
+                ni soy lo que ellos dicen... ni en lo que soy estoy!<br />
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="/proyecto"
+                class="inline-flex items-center px-6 py-3 bg-greiff-dark text-white rounded-lg hover:bg-greiff-gray transition-all shadow-md hover:shadow-lg"
+              >
+                Conoce el Proyecto
+                <svg
+                  class="w-5 h-5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+              <a
+                href="/universos"
+                class="inline-flex items-center px-6 py-3 border-2 border-greiff-dark text-greiff-dark rounded-lg hover:bg-greiff-dark hover:text-white transition-all"
+              >
+                Los Tres Universos
+              </a>
+            </div>
+          </div>
+
+          <div class="animate-fadeIn" style="animation-delay: 0.2s;">
+            <div class="relative">
+              <img
+                src="/leon-de-greiff.png"
+                alt="León de Greiff rodeado de libros"
+                class="rounded-lg shadow-2xl w-full"
+              />
+              <div
+                class="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10"
+              >
+              </div>
+            </div>
+            <p class="text-sm text-greiff-gray mt-4 text-center italic">
+              León de Greiff en su biblioteca
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-greiff-dark mb-4"
+          >
+            Un Proyecto Escalable
+          </h2>
+          <p class="text-lg text-greiff-gray max-w-2xl mx-auto">
+            Presentamos tres niveles de desarrollo para honrar el legado de uno
+            de los poetas más importantes de Colombia y América Latina
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <a href="/universos#universo-a" class="group">
+            <div
+              class="text-center p-6 rounded-lg border border-gray-200 hover:border-green-500 hover:shadow-lg transition-all"
+            >
+              <div class="text-5xl mb-4">🚀</div>
+              <h3 class="text-xl font-serif font-bold text-greiff-dark mb-2">
+                Universo A
+              </h3>
+              <p class="text-sm text-greiff-accent font-medium mb-3">
+                Mínimo Viable
+              </p>
+              <p class="text-sm text-greiff-gray">
+                Presencia digna y funcional. Contenido curado de alta calidad
+                para el lanzamiento.
+              </p>
+            </div>
+          </a>
+
+          <a href="/universos#universo-b" class="group">
+            <div
+              class="text-center p-6 rounded-lg border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all"
+            >
+              <div class="text-5xl mb-4">⚡</div>
+              <h3 class="text-xl font-serif font-bold text-greiff-dark mb-2">
+                Universo B
+              </h3>
+              <p class="text-sm text-greiff-accent font-medium mb-3">
+                Realista
+              </p>
+              <p class="text-sm text-greiff-gray">
+                Experiencia rica e interactiva. Contenidos dinámicos y
+                herramientas de búsqueda.
+              </p>
+            </div>
+          </a>
+
+          <a href="/universos#universo-c" class="group">
+            <div
+              class="text-center p-6 rounded-lg border border-gray-200 hover:border-purple-500 hover:shadow-lg transition-all"
+            >
+              <div class="text-5xl mb-4">✨</div>
+              <h3 class="text-xl font-serif font-bold text-greiff-dark mb-2">
+                Universo C
+              </h3>
+              <p class="text-sm text-greiff-accent font-medium mb-3">
+                Ideal Soñador
+              </p>
+              <p class="text-sm text-greiff-gray">
+                El recurso definitivo mundial. Gamificación, IA, contenido
+                multimedia original.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="py-20 bg-greiff-light">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-lg shadow-md p-8 md:p-12">
+          <h2 class="text-3xl font-serif font-bold text-greiff-dark mb-6">
+            El Poeta de los Múltiples Rostros
+          </h2>
+          <div class="prose prose-lg text-greiff-gray">
+            <p>
+              <strong>Francisco de Asís León Bogislao de Greiff Häusler</strong>
+              (Medellín, 1895 - Bogotá, 1976) fue uno de los más destacados poetas
+              del siglo XX en Colombia. Conocido por sus múltiples seudónimos — <em
+                >Leo Le Gris, Matías Aldecoa, Sergio Stepanski, Gaspar von der
+                Nacht</em
+              > — de Greiff creó un universo poético único e inconfundible.
+            </p>
+            <p>
+              Fundador del movimiento literario <strong>Los Panidas</strong> en Medellín
+              (1915), junto a figuras como Fernando González y Ricardo Rendón, de
+              Greiff revolucionó la literatura colombiana con su búsqueda incansable
+              de la sonoridad y sus audaces propuestas lingüísticas.
+            </p>
+            <p>
+              Su poesía, rica en vocabulario del castellano antiguo y profundos
+              conceptos filosóficos de Oriente y Occidente, ha sido comparada
+              con el culteranismo y el neobarroco poético. Un legado que, 50
+              años después de su partida, sigue resonando con fuerza.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-greiff-dark text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
+          Ayúdanos a Construir este Legado
+        </h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          Este proyecto busca crear el recurso digital más completo sobre León
+          de Greiff para las futuras generaciones. Tu apoyo puede hacerlo
+          realidad.
+        </p>
+        <a
+          href="/participar"
+          class="inline-flex items-center px-8 py-4 bg-white text-greiff-dark rounded-lg hover:bg-gray-100 transition-all shadow-lg text-lg font-medium"
+        >
+          Conoce Cómo Participar
+          <svg
+            class="w-5 h-5 ml-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+  }
+</style>

@@ -1,0 +1,231 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import UniversoCard from '../components/UniversoCard.astro';
+
+const universosData = [
+  {
+    id: 'universo-a',
+    title: 'Universo A',
+    subtitle: 'Mínimo Viable - El Lanzamiento',
+    description: 'Una presencia en línea digna y funcional para el inicio de la conmemoración. Contenido estático, pero de alta calidad que establece las bases del proyecto.',
+    icon: '🚀',
+    color: 'bg-green-500',
+    features: [
+      'Página de inicio con foto icónica y declaración de propósitos',
+      'Reseña biográfica bien escrita (1 página)',
+      'Galería de 15-20 fotos clave con leyendas',
+      '5-10 poemas seleccionados por accesibilidad y belleza',
+      'Lista curada de 10-15 enlaces importantes (documental, archivos, música)',
+      'Índices y glosarios en PDF para descarga',
+      'Agenda de eventos de la conmemoración de 50 años'
+    ],
+    resources: [
+      'Diseñador Gráfico',
+      'Programador',
+      'Investigador',
+      'Hosting',
+      'Dominio'
+    ]
+  },
+  {
+    id: 'universo-b',
+    title: 'Universo B',
+    subtitle: 'Realista - La Consolidación',
+    description: 'Una experiencia más rica e interactiva, con presupuesto moderado y equipo de trabajo a tiempo parcial. Incluye contenidos dinámicos y herramientas de búsqueda.',
+    icon: '⚡',
+    color: 'bg-blue-500',
+    features: [
+      'Todo el contenido del Universo A',
+      'Línea de tiempo interactiva con hitos biográficos',
+      'Sección "Poema de la Semana" actualizable',
+      'Reproductores incrustados con playlists de música',
+      'Recursos organizados por categorías (Ver, Escuchar, Leer)',
+      'Buscador básico para glosarios de Hjalmar de Greiff',
+      '2-3 ensayos clave publicados en HTML',
+      'Blog funcional para mantener el sitio actualizado'
+    ],
+    resources: [
+      'Diseñador Gráfico',
+      'Programador',
+      'Investigador',
+      'Administrador Web',
+      'Coordinador de contenidos',
+      'Coordinador de diseño',
+      'Hosting',
+      'Dominio'
+    ]
+  },
+  {
+    id: 'universo-c',
+    title: 'Universo C',
+    subtitle: 'Ideal Soñador - El Legado Definitivo',
+    description: 'El recurso central y definitivo a nivel mundial sobre el poeta. Requiere inversión significativa y equipo dedicado para crear una experiencia sin precedentes.',
+    icon: '✨',
+    color: 'bg-purple-500',
+    features: [
+      'Todo el contenido de Universos A y B',
+      'Mapa conceptual interactivo del "Universo Greiffiano"',
+      'Micro-videos originales (producción audiovisual)',
+      'Generador de versos al estilo de Greiff con IA',
+      'Gamificación (crucigramas, juegos, trivias)',
+      'Convenios con instituciones para material digitalizado',
+      'Podcasts para Spotify y otras plataformas',
+      'Base de datos completa hipervinculada con obra completa',
+      'Variorum Digital para comparar versiones de poemas',
+      'Sección académica con comité editorial',
+      'Sitio multilingüe con traducciones',
+      'Portal educativo con guías para profesores',
+      'Posible aplicación móvil',
+      'Convocatoria de piezas visuales y sonoras'
+    ],
+    resources: [
+      'Diseñador Gráfico',
+      'Programador Full Stack',
+      'Investigador',
+      'Administrador Web',
+      'Coordinador de contenidos',
+      'Coordinador de diseño',
+      'Productor',
+      'Realización audiovisual',
+      'Animador',
+      'Traductor',
+      'Desarrollador de IA',
+      'Hosting Premium',
+      'Dominio'
+    ]
+  }
+];
+---
+
+<Layout title="Los Tres Universos - León de Greiff">
+  <Navigation />
+  
+  <main class="pt-16">
+    <!-- Header -->
+    <section class="bg-gradient-to-b from-greiff-light to-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="text-4xl md:text-5xl font-serif font-bold text-greiff-dark mb-6">
+            Los Tres Universos
+          </h1>
+          <p class="text-xl text-greiff-gray leading-relaxed">
+            Un enfoque escalable para honrar el legado de León de Greiff. 
+            Desde un lanzamiento funcional hasta el recurso definitivo mundial sobre el poeta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Universos Cards -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-8">
+          {universosData.map((universo, index) => (
+            <div 
+              id={universo.id}
+              class="animate-fadeIn"
+              style={`animation-delay: ${index * 0.2}s;`}
+            >
+              <UniversoCard {...universo} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section class="py-20 bg-greiff-light">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-lg shadow-md p-8 md:p-12">
+          <h2 class="text-3xl font-serif font-bold text-greiff-dark mb-6">
+            Estrategia de Implementación
+          </h2>
+          <div class="space-y-6 text-greiff-gray">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                <span class="text-2xl">📐</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-greiff-dark mb-2">Arquitectura Escalable</h3>
+                <p>Crear desde el inicio una arquitectura de información robusta que permita crecer del Universo A al C sin necesidad de reconstruir completamente la plataforma.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                <span class="text-2xl">🎯</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-greiff-dark mb-2">Enfoque por Fases</h3>
+                <p>Lanzar con el Universo A para tener presencia inmediata, luego evolucionar según recursos disponibles y respuesta de la audiencia.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                <span class="text-2xl">🤝</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-greiff-dark mb-2">Colaboración y Recursos</h3>
+                <p>Aprovechar herramientas de IA, recursos en línea y colaboraciones con instituciones culturales para optimizar el desarrollo en cada fase.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                <span class="text-2xl">📊</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-greiff-dark mb-2">Contenido Estructurado</h3>
+                <p>Organización en tres niveles: "Para Legos" (accesible), "Metadatos" (recursos), y "Profundizando" (académico), manteniendo coherencia en todos los universos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-serif font-bold text-greiff-dark mb-6">
+          ¿Listo para Ver la Comparativa?
+        </h2>
+        <p class="text-lg text-greiff-gray mb-8">
+          Explora una comparación detallada de los tres universos para entender mejor las diferencias y el potencial de cada fase.
+        </p>
+        <a 
+          href="/comparativa" 
+          class="inline-flex items-center px-8 py-4 bg-greiff-dark text-white rounded-lg hover:bg-greiff-gray transition-all shadow-md"
+        >
+          Ver Comparativa Detallada
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+  }
+</style>
